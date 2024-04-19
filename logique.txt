@@ -1,0 +1,13 @@
+php artisan make:model Student
+php artisan make:model Department
+php artisan make:model Professor
+php artisan make:model Module
+php artisan make:model DepartmentHead
+php artisan make:model TeacherModule
+
+Un étudiant est associé à une seule filière.
+Une filière est associée à un département unique.
+Un professeur peut être associé à plusieurs filières (à travers les enseignements).
+Chaque module est associé à une seule filière.
+Chaque module est dispensé par un seul professeur (à travers la table des Enseignements).
+Dans un département, le chef de département est un professeur particulier (identifié dans la table des Chefs de Département).
