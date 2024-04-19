@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Filiere;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class FiliereSeeder extends Seeder
 {
@@ -12,6 +13,6 @@ class FiliereSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Filiere::factory(10)->create();
     }
 }

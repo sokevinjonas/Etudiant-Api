@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Department;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,23 @@ class FiliereFactory extends Factory
     public function definition(): array
     {
         return [
-            //
-        ];
-    }
+            'nom' => $this->faker->randomElement(
+                [
+                    'Informatique', 
+                    'Génie mécanique', 
+                    'Gestion des affaires', 
+                    'Sciences politiques',
+                    'Finance', 
+                    'Biologie', 
+                    'Architecture', 
+                    'Médecine',
+                    'Langues étrangères', 
+                    'Design graphique',
+                ]),
+
+            'department_id' => function() {
+                return Department::factory();
+            }
+            ];
+        }
 }
